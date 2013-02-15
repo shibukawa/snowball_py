@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: snowballstemmer
-Version: 0.1.0
+Version: 1.0.0
 Summary: This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.
 Home-page: https://github.com/shibukawa/snowball_py
 Author: Yoshiki Shibukawa
@@ -27,7 +27,7 @@ Description:
         
 Keywords: stemmer
 Platform: UNKNOWN
-Classifier: Development Status :: 4 - Beta
+Classifier: Development Status :: 5 - Production/Stable
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: BSD License
 Classifier: Programming Language :: Python
@@ -47,3 +47,6 @@ Classifier: Natural Language :: Spanish
 Classifier: Natural Language :: Swedish
 Classifier: Natural Language :: Turkish
 Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.5Programming Language :: Python :: 2.6Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: Implementation :: PyPy

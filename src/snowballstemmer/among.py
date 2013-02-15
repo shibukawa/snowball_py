@@ -11,5 +11,5 @@ class Among(object):
         self.s_size = len(s)
         self.s = s
         self.substring_i = substring_i
-	self.result = result
+        self.result = result
         self.method = method

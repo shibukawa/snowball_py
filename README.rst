@@ -4,14 +4,20 @@ Snowball stemming library collection for Python
 This document pertains to the Python version of the stemmer library distribution,
 available for download from:
 
-* https://github.com/shibukawa/snowball_jsx/
+* https://github.com/shibukawa/snowball/
+
+  This repository includes Python source code generator
+
+* https://github.com/shibukawa/snowball_python/
+
+  This repository includes generated Python source codes
 
 Original program is maintained at following place:
 
 * http://snowball.tartarus.org/
 
-Original Snowball product is created by Dr Martin Porter and  Richard Boulton (Java porting) under
-BSD license.
+Original Snowball product created by Dr Martin Porter and Richard Boulton (Java porting).
+Original Snowball and my products are released under BSD license.
 
 How to use library
 ------------------

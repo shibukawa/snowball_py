@@ -1,7 +1,7 @@
 # self file was generated automatically by the Snowball to Python interpreter
 
-from basestemmer import BaseStemmer
-from among import Among
+from .basestemmer import BaseStemmer
+from .among import Among
 
 
 class SpanishStemmer(BaseStemmer):
@@ -1008,8 +1008,6 @@ class SpanishStemmer(BaseStemmer):
 
     def hashCode(self):
         return hash("SpanishStemmer")
-
-SpanishStemmer.methodObject = SpanishStemmer()
 class lab0(BaseException): pass
 class lab1(BaseException): pass
 class lab2(BaseException): pass
