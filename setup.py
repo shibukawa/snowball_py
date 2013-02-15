@@ -51,8 +51,8 @@ It includes following language algorithms:
           'Natural Language :: Swedish',
           'Natural Language :: Turkish',
           'Operating System :: OS Independent',
-          'Programming Language :: Python :: 2.5'
-          'Programming Language :: Python :: 2.6'
+          'Programming Language :: Python :: 2.5',
+          'Programming Language :: Python :: 2.6',
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3.3',
           'Programming Language :: Python :: Implementation :: PyPy'

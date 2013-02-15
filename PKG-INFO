@@ -47,6 +47,8 @@ Classifier: Natural Language :: Spanish
 Classifier: Natural Language :: Swedish
 Classifier: Natural Language :: Turkish
 Classifier: Operating System :: OS Independent
-Classifier: Programming Language :: Python :: 2.5Programming Language :: Python :: 2.6Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2.5
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
 Classifier: Programming Language :: Python :: 3.3
 Classifier: Programming Language :: Python :: Implementation :: PyPy
