@@ -1,43 +1,7 @@
 import sys
 import re
 import codecs
-
 import snowballstemmer
-from snowballstemmer.danish_stemmer import DanishStemmer
-from snowballstemmer.dutch_stemmer import DutchStemmer
-from snowballstemmer.english_stemmer import EnglishStemmer
-from snowballstemmer.finnish_stemmer import FinnishStemmer
-from snowballstemmer.french_stemmer import FrenchStemmer
-from snowballstemmer.german_stemmer import GermanStemmer
-from snowballstemmer.hungarian_stemmer import HungarianStemmer
-from snowballstemmer.italian_stemmer import ItalianStemmer
-from snowballstemmer.norwegian_stemmer import NorwegianStemmer
-from snowballstemmer.porter_stemmer import PorterStemmer
-from snowballstemmer.portuguese_stemmer import PortugueseStemmer
-from snowballstemmer.romanian_stemmer import RomanianStemmer
-from snowballstemmer.russian_stemmer import RussianStemmer
-from snowballstemmer.spanish_stemmer import SpanishStemmer
-from snowballstemmer.swedish_stemmer import SwedishStemmer
-from snowballstemmer.turkish_stemmer import TurkishStemmer
-
-stemmers = {
-    'danish': DanishStemmer,
-    'dutch': DutchStemmer,
-    'english': EnglishStemmer,
-    'finnish': FinnishStemmer,
-    'french': FrenchStemmer,
-    'german': GermanStemmer,
-    'hungarian': HungarianStemmer,
-    'italian': ItalianStemmer,
-    'norwegian': NorwegianStemmer,
-    'porter': PorterStemmer,
-    'portuguese': PortugueseStemmer,
-    'romanian': RomanianStemmer,
-    'russian': RussianStemmer,
-    'spanish': SpanishStemmer,
-    'swedish': SwedishStemmer,
-    'turkish': TurkishStemmer
-}
 
 def usage():
     print('''usage: jsx_stemwords [-l <language>] [-i <input file>] [-o <output file>] [-c <character encoding>] [-p[2]] [-h]
@@ -113,11 +77,10 @@ def main():
 
 def stemming(lang, input, output, encoding, pretty):
     result = []
-    stemmerClass = stemmers.get(lang.lower(), EnglishStemmer)
-    stemmer = stemmerClass()
+    stemmer = snowballstemmer.stemmer(lang)
     for original in codecs.open(input, "r", encoding).readlines():
         original = original.strip()
-        stemmed = stemmer.stem(original)
+        stemmed = stemmer.stemWord(original)
         if result:
             result.append('\n')
         if pretty == 0:

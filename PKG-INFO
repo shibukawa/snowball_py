@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: snowballstemmer
-Version: 1.0.0
+Version: 1.1.0
 Summary: This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.
 Home-page: https://github.com/shibukawa/snowball_py
 Author: Yoshiki Shibukawa
@@ -24,6 +24,9 @@ Description:
         * Spanish
         * Swedish
         * Turkish
+        
+        This is a pure Python stemming library. If `PyStemmer <http://pypi.python.org/pypi/PyStemmer>`_ is available, this module uses
+        it to accelerate.
         
 Keywords: stemmer
 Platform: UNKNOWN
@@ -52,3 +55,7 @@ Classifier: Programming Language :: Python :: 2.6
 Classifier: Programming Language :: Python :: 2.7
 Classifier: Programming Language :: Python :: 3.3
 Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP :: Indexing/Search
+Classifier: Topic :: Text Processing :: Indexing
+Classifier: Topic :: Text Processing :: Linguistic

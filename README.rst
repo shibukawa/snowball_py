@@ -22,44 +22,50 @@ Original Snowball and my products are released under BSD license.
 How to use library
 ------------------
 
-You can use each stemming modules from Python program.
+The ``snowballstemmer`` module has two functions.
+
+The ``snowballstemmer.algorithms`` function returns a list of avilable algorithm name' string.
+
+The ``snowballstemmer.stemmer`` function accepts algorithm name and returns ``Stemmer`` objects.
+
+``Stemmer`` objects have ``Stemmer.stemWord(word)`` method and ``Stemmer.stemWords(word[])`` method.
 
 .. code-block:: python
 
    import snowballstemmer
 
-   stemmer = snowballstemmer.EnglishStemmer();
-   print(stemmer.stem("We are the world"));
+   stemmer = snowballstemmer.stemmer('english');
+   print(stemmer.stemWords("We are the world".split()));
 
-Following modules are common modules. Don't forget bundle these modules to your program:
+``Stemmer`` objects have ``Stemmer.maxCacheSize`` property. They cache result within the value. Default is ``10000``.
 
-* ``snowballstemmer/__init__.py``
-* ``snowballstemmer/among.py``
-* ``snowballstemmer/basestemmer.jsx``
+Accerarates Stemming
+--------------------
 
-Following modules are optiona modules. Select your needed language modules:
+if **PyStemmer** is installed, ``snowballstemmer.stemmer`` returns ``PyStemmer``\ 's ``Stemmer`` objects. This ``Stemmer`` object has same methods (``Stemmer.stemWord()``, ``Stemmer.stemWords()``).
 
-* ``danish_stemmer.py``
-* ``dutch_stemmer.py``
-* ``english_stemmer.py``
-* ``finnish_stemmer.py``
-* ``french_stemmer.py``
-* ``german_stemmer.py``
-* ``hungarian_stemmer.py``
-* ``italian_stemmer.py``
-* ``norwegian_stemmer.py``
-* ``porter_stemmer.py``
-* ``portuguese_stemmer.py``
-* ``romanian_stemmer.py``
-* ``russian_stemmer.py``
-* ``spanish_stemmer.py``
-* ``swedish_stemmer.py``
-* ``turkish_stemmer.py``
+**PyStemmer** is a Snowball's ``libstemmer_c`` wrapper module and it returns 100% compatible result with **snowballstemmer**.
+
+**PyStemmer** has faster speed because it uses C-lang module, and **snowballstemmer** has higher usability because it is pure Python module.
+
+* `PyStemmer <http://pypi.python.org/pypi/PyStemmer/>`_
+
+Benchmark
+~~~~~~~~~
+
+Test Case: Snowball stemmer check data (16 algorithms, total 582560 words, cache hit 0%)
+Computer: MacBook Pro 3rd Gen Corei7 2.3GHz
+
+* Python 2.7 + **snowballstemmer** : 2m 30s
+* PyPy 1.9 + **snowballstemmer** : 45s
+* Python 2.7 + **PyStemmer** : 5s
+
+This test case is much harder than usual usecases!
 
 The TestApp example
 -------------------
 
-The :file:`testapp.jsx` example program allows you to run any of the stemmers
+The ``testapp.py`` example program allows you to run any of the stemmers
 on a sample vocabulary.
 
 Usage::

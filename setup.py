@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='snowballstemmer',
-      version='1.0.0',
+      version='1.1.0',
       description='This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.',
       long_description='''
 It includes following language algorithms:
@@ -23,12 +23,16 @@ It includes following language algorithms:
 * Spanish
 * Swedish
 * Turkish
+
+This is a pure Python stemming library. If `PyStemmer <http://pypi.python.org/pypi/PyStemmer>`_ is available, this module uses
+it to accelerate.
 ''',
       author='Yoshiki Shibukawa',
       author_email='yoshiki at shibu.jp',
       url='https://github.com/shibukawa/snowball_py',
       keywords="stemmer",
       license="BSD",
+      packages=['snowballstemmer'],
       package_dir={"snowballstemmer": "src/snowballstemmer"},
       classifiers = [
           'Development Status :: 5 - Production/Stable',
@@ -55,6 +59,10 @@ It includes following language algorithms:
           'Programming Language :: Python :: 2.6',
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3.3',
-          'Programming Language :: Python :: Implementation :: PyPy'
+          'Programming Language :: Python :: Implementation :: PyPy',
+          'Topic :: Database',
+          'Topic :: Internet :: WWW/HTTP :: Indexing/Search',
+          'Topic :: Text Processing :: Indexing',
+          'Topic :: Text Processing :: Linguistic'
      ]
 )
