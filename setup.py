@@ -33,7 +33,7 @@ it to accelerate.
       keywords="stemmer",
       license="BSD",
       packages=['snowballstemmer'],
-      package_dir={"snowballstemmer": "src/snowballstemmer"},
+      package_dir={"snowballstemmer": "snowballstemmer"},
       classifiers = [
           'Development Status :: 5 - Production/Stable',
           'Intended Audience :: Developers',
