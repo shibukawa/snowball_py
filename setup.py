@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='snowballstemmer',
-      version='1.1.0',
+      version='1.2.0',
       description='This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.',
       long_description='''
 It includes following language algorithms:
@@ -59,6 +59,7 @@ it to accelerate.
           'Programming Language :: Python :: 2.6',
           'Programming Language :: Python :: 2.7',
           'Programming Language :: Python :: 3.3',
+          'Programming Language :: Python :: 3.4',
           'Programming Language :: Python :: Implementation :: PyPy',
           'Topic :: Database',
           'Topic :: Internet :: WWW/HTTP :: Indexing/Search',

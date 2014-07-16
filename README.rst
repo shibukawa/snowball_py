@@ -76,6 +76,12 @@ Usage::
 
    $ python testapp.py English "sentences... "
 
+Thanks
+-------
+
+* Original Snowball authors
+* Emil Stenström
+
 License
 -------
 

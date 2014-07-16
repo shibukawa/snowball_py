@@ -8,7 +8,7 @@ def usage():
 
 def main():
     argv = sys.argv
-    if len(argv) < 1:
+    if len(argv) < 2:
         usage()
         return
     algorithm = 'english'
