@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='snowballstemmer',
-      version='1.2.0',
+      version='1.2.1',
       description='This package provides 16 stemmer algorithms (15 + Poerter English stemmer) generated from Snowball algorithms.',
       long_description='''
 It includes following language algorithms:
